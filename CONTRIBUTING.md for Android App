@@ -1,0 +1,363 @@
+# Contributing to SMS Messaging Application
+
+Thank you for your interest in contributing to the SMS Messaging Application! We welcome contributions from the community to help improve and enhance this project.
+
+## 📋 Table of Contents
+- [Code of Conduct](#code-of-conduct)
+- [Getting Started](#getting-started)
+- [Development Setup](#development-setup)
+- [How to Contribute](#how-to-contribute)
+- [Coding Standards](#coding-standards)
+- [Pull Request Process](#pull-request-process)
+- [Testing Guidelines](#testing-guidelines)
+- [Reporting Bugs](#reporting-bugs)
+- [Suggesting Features](#suggesting-features)
+
+## 📜 Code of Conduct
+
+### Our Pledge
+We are committed to providing a welcoming and inclusive environment for everyone. We expect all contributors to:
+
+- Be respectful and considerate
+- Welcome diverse perspectives and experiences
+- Accept constructive criticism gracefully
+- Focus on what's best for the community
+- Show empathy towards other community members
+
+### Unacceptable Behavior
+- Harassment or discriminatory language
+- Trolling, insulting, or derogatory comments
+- Publishing others' private information
+- Other conduct deemed inappropriate in a professional setting
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Android Studio Arctic Fox or later
+- JDK 11 or higher
+- Git
+- Basic knowledge of Java and Android development
+
+### Fork and Clone
+1. Fork the repository on GitHub
+2. Clone your fork locally:
+```bash
+git clone https://github.com/YOUR-USERNAME/Mobile_Application-for-Send_and_Receve_Text_Massages.git
+cd Mobile_Application-for-Send_and_Receve_Text_Massages
+```
+
+3. Add upstream remote:
+```bash
+git remote add upstream https://github.com/therajbali/Mobile_Application-for-Send_and_Receve_Text_Massages.git
+```
+
+## 💻 Development Setup
+
+1. **Open in Android Studio:**
+   - Launch Android Studio
+   - Select "Open an Existing Project"
+   - Navigate to the cloned directory
+
+2. **Sync Gradle:**
+   - Wait for Gradle sync to complete
+   - Resolve any dependency issues
+
+3. **Configure Emulator or Device:**
+   - Create an AVD or connect a physical device
+   - Enable USB debugging on physical devices
+
+4. **Build and Run:**
+   ```bash
+   ./gradlew assembleDebug
+   ./gradlew installDebug
+   ```
+
+## 🤝 How to Contribute
+
+### Types of Contributions
+
+1. **Bug Fixes**
+   - Check existing issues for known bugs
+   - Create a new issue if bug is unreported
+   - Reference the issue in your pull request
+
+2. **New Features**
+   - Discuss major features in issues first
+   - Keep features focused and well-documented
+   - Ensure backward compatibility
+
+3. **Documentation**
+   - Improve README or code comments
+   - Add JavaDoc for public methods
+   - Update wiki or guides
+
+4. **Code Refactoring**
+   - Improve code quality and performance
+   - Follow existing architecture patterns
+   - Don't break existing functionality
+
+### Workflow
+
+1. **Create a Branch:**
+```bash
+git checkout -b feature/your-feature-name
+# or
+git checkout -b fix/bug-description
+```
+
+2. **Make Changes:**
+   - Write clean, well-documented code
+   - Follow coding standards
+   - Add/update tests as needed
+
+3. **Commit Changes:**
+```bash
+git add .
+git commit -m "Add: Brief description of changes"
+```
+
+4. **Push to Fork:**
+```bash
+git push origin feature/your-feature-name
+```
+
+5. **Create Pull Request:**
+   - Go to your fork on GitHub
+   - Click "New Pull Request"
+   - Provide clear description of changes
+
+## 📝 Coding Standards
+
+### Java Conventions
+
+**Naming:**
+```java
+// Classes: PascalCase
+public class MessageAdapter { }
+
+// Methods: camelCase
+public void sendMessage() { }
+
+// Constants: UPPER_SNAKE_CASE
+private static final int MAX_MESSAGE_LENGTH = 160;
+
+// Variables: camelCase
+String phoneNumber;
+```
+
+**Code Structure:**
+```java
+public class Example {
+    // 1. Constants
+    private static final String TAG = "Example";
+    
+    // 2. Class variables
+    private String name;
+    
+    // 3. Constructor
+    public Example() { }
+    
+    // 4. Lifecycle methods (for Activities/Fragments)
+    @Override
+    protected void onCreate(Bundle savedInstanceState) { }
+    
+    // 5. Public methods
+    public void publicMethod() { }
+    
+    // 6. Private methods
+    private void privateMethod() { }
+    
+    // 7. Inner classes
+    private static class InnerClass { }
+}
+```
+
+### XML Conventions
+
+**Layout Files:**
+```xml
+<!-- Use meaningful IDs with prefixes -->
+<TextView
+    android:id="@+id/tv_message_content"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/message_hint" />
+```
+
+**Resource Naming:**
+- Layouts: `activity_*.xml`, `fragment_*.xml`, `item_*.xml`
+- IDs: `tv_*` (TextView), `btn_*` (Button), `et_*` (EditText)
+- Strings: Descriptive names in `strings.xml`
+- Colors: Semantic names in `colors.xml`
+
+### Best Practices
+
+1. **Use String Resources:**
+```java
+// Bad
+textView.setText("Hello World");
+
+// Good
+textView.setText(R.string.hello_world);
+```
+
+2. **Proper Error Handling:**
+```java
+try {
+    // Code that might throw exception
+} catch (Exception e) {
+    Log.e(TAG, "Error description", e);
+    // Handle error appropriately
+}
+```
+
+3. **Memory Management:**
+```java
+@Override
+protected void onDestroy() {
+    super.onDestroy();
+    // Clean up resources, unregister receivers, etc.
+}
+```
+
+4. **Use AndroidX Libraries:**
+```java
+import androidx.appcompat.app.AppCompatActivity;
+// Instead of android.support.*
+```
+
+## 🔄 Pull Request Process
+
+### Before Submitting
+
+- [ ] Code follows project coding standards
+- [ ] All tests pass
+- [ ] Added/updated tests for new features
+- [ ] Documentation updated if needed
+- [ ] No merge conflicts with master branch
+- [ ] Commit messages are clear and descriptive
+
+### PR Description Template
+
+```markdown
+## Description
+Brief description of changes
+
+## Type of Change
+- [ ] Bug fix
+- [ ] New feature
+- [ ] Breaking change
+- [ ] Documentation update
+
+## Testing
+Describe testing performed
+
+## Screenshots (if applicable)
+Add screenshots for UI changes
+
+## Checklist
+- [ ] Code follows style guidelines
+- [ ] Self-review completed
+- [ ] Comments added for complex code
+- [ ] Documentation updated
+- [ ] No new warnings generated
+- [ ] Tests added/updated
+```
+
+### Review Process
+
+1. Maintainers will review your PR
+2. Address any requested changes
+3. Once approved, PR will be merged
+4. Your contribution will be acknowledged
+
+## 🧪 Testing Guidelines
+
+### Unit Tests
+```java
+@Test
+public void testMessageValidation() {
+    String validMessage = "Test message";
+    assertTrue(MessageValidator.isValid(validMessage));
+}
+```
+
+### Running Tests
+```bash
+# Unit tests
+./gradlew test
+
+# Instrumentation tests
+./gradlew connectedAndroidTest
+```
+
+### Test Coverage
+- Aim for at least 70% code coverage
+- Test critical paths and edge cases
+- Mock dependencies appropriately
+
+## 🐛 Reporting Bugs
+
+### Before Reporting
+- Check if bug is already reported
+- Verify it's reproducible
+- Collect relevant information
+
+### Bug Report Template
+
+**Title:** Brief, descriptive title
+
+**Description:**
+- What happened?
+- What did you expect?
+
+**Steps to Reproduce:**
+1. Step one
+2. Step two
+3. Step three
+
+**Environment:**
+- Device: [e.g., Pixel 6]
+- Android Version: [e.g., Android 13]
+- App Version: [e.g., 1.2.0]
+
+**Screenshots:**
+If applicable, add screenshots
+
+**Additional Context:**
+Any other relevant information
+
+## 💡 Suggesting Features
+
+### Feature Request Template
+
+**Title:** Clear feature description
+
+**Problem Statement:**
+What problem does this solve?
+
+**Proposed Solution:**
+How would this feature work?
+
+**Alternatives Considered:**
+Other approaches you considered
+
+**Additional Context:**
+Mockups, examples, or references
+
+## 📞 Questions?
+
+- Open a discussion on GitHub
+- Comment on relevant issues
+- Contact maintainers
+
+## 🏆 Recognition
+
+Contributors will be:
+- Listed in README acknowledgments
+- Mentioned in release notes
+- Appreciated by the community! 🎉
+
+---
+
+Thank you for contributing to the SMS Messaging Application! 💙
