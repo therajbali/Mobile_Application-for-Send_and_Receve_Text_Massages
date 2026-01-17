@@ -47,13 +47,6 @@ A feature-rich Android messaging application built with Java that enables users 
 - 💾 **Local Storage** - Messages stored locally using SQLite
 - 🔔 **Broadcast Receivers** - Real-time message reception using broadcast receivers
 
-## 📸 Screenshots
-
-| Home Screen | Conversation | Send Message |
-|-------------|--------------|--------------|
-| ![Home](screenshots/home.png) | ![Chat](screenshots/chat.png) | ![Send](screenshots/send.png) |
-
-*Add screenshots in `screenshots/` folder*
 
 ## 🛠️ Technologies Used
 
@@ -319,8 +312,8 @@ Found a bug? Please open an issue with:
 **Raj Bali**
 
 - GitHub: [@therajbali](https://github.com/therajbali)
-- LinkedIn: [Add your LinkedIn]
-- Email: [Add your email]
+- LinkedIn: (https://www.linkedin.com/in/therajbali/)
+- Email: rajbaliofficial@gmail.com
 
 ## 🙏 Acknowledgments
 
@@ -341,6 +334,6 @@ Found a bug? Please open an issue with:
 
 ⭐ **If you found this project helpful, please give it a star!** ⭐
 
-**Made with ❤️ by Raj Bali**
+**Made with ❤️ by Rajbali**
 
 </div>
